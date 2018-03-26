@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B8442952069BC200081490B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8442942069BC200081490B /* AppDelegate.swift */; };
-		2B8442972069BC200081490B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8442962069BC200081490B /* ViewController.swift */; };
+		2B8442972069BC200081490B /* GuideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8442962069BC200081490B /* GuideVC.swift */; };
 		2B84429A2069BC200081490B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8442982069BC200081490B /* Main.storyboard */; };
 		2B84429C2069BC200081490B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B84429B2069BC200081490B /* Assets.xcassets */; };
 		2B84429F2069BC200081490B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B84429D2069BC200081490B /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		2B8442912069BC200081490B /* TrailGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B8442942069BC200081490B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B8442962069BC200081490B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B8442962069BC200081490B /* GuideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideVC.swift; sourceTree = "<group>"; };
 		2B8442992069BC200081490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B84429B2069BC200081490B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B84429E2069BC200081490B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,46 @@
 		2B8442932069BC200081490B /* TrailGuide */ = {
 			isa = PBXGroup;
 			children = (
-				2B8442942069BC200081490B /* AppDelegate.swift */,
-				2B8442962069BC200081490B /* ViewController.swift */,
-				2B8442982069BC200081490B /* Main.storyboard */,
-				2B84429B2069BC200081490B /* Assets.xcassets */,
-				2B84429D2069BC200081490B /* LaunchScreen.storyboard */,
-				2B8442A02069BC200081490B /* Info.plist */,
+				2B8442A62069BC2A0081490B /* Model */,
+				2B8442A72069BC380081490B /* View */,
+				2B8442A82069BC440081490B /* Controller */,
+				2B8442A92069BC4B0081490B /* Resources */,
 			);
 			path = TrailGuide;
+			sourceTree = "<group>";
+		};
+		2B8442A62069BC2A0081490B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B8442A72069BC380081490B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B8442982069BC200081490B /* Main.storyboard */,
+				2B84429D2069BC200081490B /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B8442A82069BC440081490B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B8442942069BC200081490B /* AppDelegate.swift */,
+				2B8442962069BC200081490B /* GuideVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B8442A92069BC4B0081490B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B84429B2069BC200081490B /* Assets.xcassets */,
+				2B8442A02069BC200081490B /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B8442972069BC200081490B /* ViewController.swift in Sources */,
+				2B8442972069BC200081490B /* GuideVC.swift in Sources */,
 				2B8442952069BC200081490B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrailGuide/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TrailGuide/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jamesdyer.TrailGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TrailGuide/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TrailGuide/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.jamesdyer.TrailGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
