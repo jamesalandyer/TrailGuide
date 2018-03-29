@@ -25,6 +25,15 @@ class GearVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         categoryBG.image = UIImage(named: currentCategory.imageName)
         categoryLabel.text = currentCategory.name
+        
+        setUpNavigation()
+    }
+    
+    func setUpNavigation() {
+        let logo = UIImage(named: "TRAILguide")
+        let logoImageView = UIImageView(image: logo)
+        self.navigationItem.titleView = logoImageView
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
     func initGear(category: Category) {
@@ -43,6 +52,17 @@ class GearVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             return cell
         } else {
             return GearCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailVC", sender: allGear[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailVC {
+            detailVC.initSelected(gear: sender as! Gear)
+            detailVC.selectedCategory = currentCategory
         }
     }
     

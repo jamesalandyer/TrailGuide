@@ -12,9 +12,14 @@ class GearCell: UICollectionViewCell {
     
     @IBOutlet weak var gearImage: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.cornerRadius = 5.0
+    }
+    
     func updateViews(gear: Gear) {
         gearImage.image = UIImage(named: gear.imageName)
-        print("HELLO AGAIN!")
     }
     
 }

@@ -20,8 +20,21 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         
+        setUpNavigation()
     }
 
+    func setUpNavigation() {
+        let logo = UIImage(named: "TRAILguide")
+        let logoImageView = UIImageView(image: logo)
+        self.navigationItem.titleView = logoImageView
+        
+        let infoBtn = UIImage(named: "infoBtn")
+        let leftBtn = UIBarButtonItem(image: infoBtn, style: .plain, target: self, action: #selector(info))
+        self.navigationItem.leftBarButtonItem = leftBtn
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allCategories.count
     }
@@ -45,6 +58,11 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if let gearVC = segue.destination as? GearVC {
             gearVC.initGear(category: sender as! Category)
         }
+    }
+    
+    @objc
+    func info() {
+        performSegue(withIdentifier: "AppInfoVC", sender: self)
     }
 
 }

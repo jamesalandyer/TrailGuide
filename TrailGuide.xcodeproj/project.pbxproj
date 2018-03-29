@@ -18,6 +18,10 @@
 		2BB82B4D206B2689005C2A23 /* GearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B4C206B2689005C2A23 /* GearCell.swift */; };
 		2BB82B4F206B2735005C2A23 /* Gear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B4E206B2735005C2A23 /* Gear.swift */; };
 		2BB82B52206B27DD005C2A23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B51206B27DD005C2A23 /* DataService.swift */; };
+		2BB82B54206C676B005C2A23 /* AppInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B53206C676B005C2A23 /* AppInfoVC.swift */; };
+		2BB82B56206C6890005C2A23 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B55206C6890005C2A23 /* RoundedButton.swift */; };
+		2BB82B58206C6F81005C2A23 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B57206C6F81005C2A23 /* RoundedView.swift */; };
+		2BB82B5A206C70A4005C2A23 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB82B59206C70A4005C2A23 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		2BB82B4C206B2689005C2A23 /* GearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearCell.swift; sourceTree = "<group>"; };
 		2BB82B4E206B2735005C2A23 /* Gear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gear.swift; sourceTree = "<group>"; };
 		2BB82B51206B27DD005C2A23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		2BB82B53206C676B005C2A23 /* AppInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoVC.swift; sourceTree = "<group>"; };
+		2BB82B55206C6890005C2A23 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		2BB82B57206C6F81005C2A23 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		2BB82B59206C70A4005C2A23 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,8 @@
 		2B8442A72069BC380081490B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BB82B57206C6F81005C2A23 /* RoundedView.swift */,
+				2BB82B55206C6890005C2A23 /* RoundedButton.swift */,
 				2B8442AC2069C8CA0081490B /* CategoryCell.swift */,
 				2BB82B4C206B2689005C2A23 /* GearCell.swift */,
 				2B8442982069BC200081490B /* Main.storyboard */,
@@ -101,6 +111,8 @@
 				2B8442942069BC200081490B /* AppDelegate.swift */,
 				2B8442962069BC200081490B /* CategoriesVC.swift */,
 				2BB82B4A206B2464005C2A23 /* GearVC.swift */,
+				2BB82B53206C676B005C2A23 /* AppInfoVC.swift */,
+				2BB82B59206C70A4005C2A23 /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,12 +207,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB82B4F206B2735005C2A23 /* Gear.swift in Sources */,
+				2BB82B56206C6890005C2A23 /* RoundedButton.swift in Sources */,
 				2B8442972069BC200081490B /* CategoriesVC.swift in Sources */,
+				2BB82B54206C676B005C2A23 /* AppInfoVC.swift in Sources */,
 				2BB82B4B206B2464005C2A23 /* GearVC.swift in Sources */,
+				2BB82B5A206C70A4005C2A23 /* DetailVC.swift in Sources */,
 				2BB82B4D206B2689005C2A23 /* GearCell.swift in Sources */,
 				2B8442952069BC200081490B /* AppDelegate.swift in Sources */,
 				2B8442AB2069C5E00081490B /* Category.swift in Sources */,
 				2B8442AD2069C8CA0081490B /* CategoryCell.swift in Sources */,
+				2BB82B58206C6F81005C2A23 /* RoundedView.swift in Sources */,
 				2BB82B52206B27DD005C2A23 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.jamesdyer.TrailGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.jamesdyer.TrailGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
